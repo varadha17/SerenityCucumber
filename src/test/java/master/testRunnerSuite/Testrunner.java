@@ -17,6 +17,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 
 
-public class testRunnerSuite {
+public class Testrunner {
 
 }

@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Open browser","getCurrent page url","SUCCESS","2021-07-22T18:57:00.5445647+05:30[Asia/Calcutta]","0.0","23.14"
+"Open browser","get all items","SUCCESS","2021-07-22T18:57:24.435497+05:30[Asia/Calcutta]","0.0","21.01"

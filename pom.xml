@@ -19,6 +19,8 @@
     <webdriver.version>4.4.3</webdriver.version>
     <serenity.version>2.4.48</serenity.version>
     <serenity.maven.version>2.4.48</serenity.maven.version>
+    <webdriver.base.url></webdriver.base.url>
+    <tags></tags>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
@@ -138,9 +140,20 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/*testRunnerSuite.java</include>
+                        <include>**/*Testrunner.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                    	<webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+                    </systemPropertyVariables>
                 </configuration>
+                <executions>
+                <execution>
+                	<goals>
+                		<goal>integration-test</goal>
+                		<goal>verify</goal>
+                	</goals>
+                	</execution>
+                </executions>
             </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -159,11 +172,24 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
-        
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
        <plugin>
       	<groupId>net.serenity-bdd.maven.plugins</groupId>
       	<artifactId>serenity-maven-plugin</artifactId>
       	<version>${serenity.maven.version}</version>
+      	<configuration>
+      		<tags>${tags}</tags>
+      	</configuration>
+      	<dependencies>
+      <dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-core</artifactId>
+    <version>${serenity.version}</version>
+	</dependency>
+      	</dependencies>
       		<executions>
           		<execution>
              		 <id>serenity-reports</id>
@@ -173,13 +199,6 @@
               		</goals>
           		</execution>
       		</executions>
-      	<dependencies>
-      <dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-core</artifactId>
-    <version>${serenity.version}</version>
-	</dependency>
-      	</dependencies>
   		</plugin>
       </plugins>
     </pluginManagement>

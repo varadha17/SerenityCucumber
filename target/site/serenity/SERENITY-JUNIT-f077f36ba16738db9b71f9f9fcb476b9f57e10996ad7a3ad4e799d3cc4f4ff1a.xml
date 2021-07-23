@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Open browser" skipped="0" tests="2" time="45.53" timestamp="2021-07-20 03:51:16"><testcase name="getCurrent page url"/><testcase name="get all items"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Open browser" skipped="0" tests="2" time="44.15" timestamp="2021-07-22 06:57:00"><testcase name="getCurrent page url"/><testcase name="get all items"/></testsuite>
