@@ -2,6 +2,7 @@ package master.pages;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,6 +27,7 @@ public class Home extends PageObject {
 		for(WebElement ele:items) {
 			System.out.println(ele.getText());
 		}
+		Assert.assertEquals("Hello","some");
 	}
 
 }
