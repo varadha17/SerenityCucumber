@@ -19,7 +19,6 @@ public class HomeTest {
 	@Given("list all items present in HomePage")
 	public void list_all_items_present_in_home_page() throws InterruptedException {
 	   home.listallitems();
-	   Assert.assertEquals(false,false);
 	}
 
 }

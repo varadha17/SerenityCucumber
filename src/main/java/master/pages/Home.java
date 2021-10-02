@@ -27,7 +27,6 @@ public class Home extends PageObject {
 		for(WebElement ele:items) {
 			System.out.println(ele.getText());
 		}
-		Assert.assertEquals("Hello","some");
 	}
 
 }
